@@ -1,0 +1,164 @@
+#light .parent {
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+#light .wrapperTechStack {
+  box-shadow: none;
+}
+#light .card {
+  box-shadow: none;
+  background-color: rgb(207, 207, 207);
+  transition-duration: 0.5s;
+}
+#light .card:hover {
+  background: rgb(148, 148, 148);
+}
+#light .info h1 {
+  color: rgb(230, 230, 230);
+}
+#dark .parent {
+  background: #0c0c1d;
+  transition-duration: 1s;
+}
+#dark .wrapperTechStack {
+  transition-duration: 2s;
+}
+#dark .wrapperTechStack .card {
+  transition-duration: 0.5s;
+}
+.parent {
+  background: #0c0c1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  .wrapperTechStack {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    box-shadow: 0px 0px 55px 1px rgb(71, 0, 116);
+    box-shadow: 0px 0px 60px 1px rgb(111, 12, 168);
+    box-shadow: 0px 0px 70px 1px rgb(130, 17, 134);
+    box-shadow: 0px 0px 90px 1px rgb(130, 17, 134);
+    .card {
+      box-shadow: 0px 0px 2px 2px rgb(197, 5, 255);
+      box-shadow: 0px 0px 10px 3px rgb(212, 0, 255);
+      box-shadow: 0px 0px 20px 5px rgb(188, 17, 194);
+      box-shadow: 0px 0px 30px 10px rgb(191, 22, 197);
+      width: 15vw;
+      background: #c9c9c9;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .info {
+        top: 0%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        h1 {
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          backdrop-filter: blur(10px);
+          opacity: 0;
+        }
+      }
+    }
+    .card:hover {
+      background: #807575;
+
+      img {
+        height: 80%;
+        width: 100%;
+      }
+
+      .info {
+        h1 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//kinuha ko lang are sa uiverse.io hehehehehe
+.switch {
+  --button-width: 3.5em;
+  --button-height: 2em;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc(
+    (var(--button-height) - var(--toggle-diameter)) / 2
+  );
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+}
+
+.slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+.slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)
+    )
+  );
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+}
+
+.switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
+    )
+  );
+}

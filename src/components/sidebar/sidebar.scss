@@ -1,0 +1,63 @@
+#light .bg {
+  transition-duration: 1s;
+  background-color: rgb(179, 179, 179);
+  color: white;
+}
+#light .links {
+  a {
+    color: white;
+  }
+}
+#dark .bg {
+  background-color: white;
+  transition-duration: 1s;
+}
+.sidebar {
+  //layout ng sidebar
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  .bg {
+    //paglalagyan ng mga links
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    background: white;
+    z-index: 99;
+    .links {
+      //mga links na ilalagay
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        font-size: 40px;
+      }
+    }
+  }
+  button {
+    //burger btn
+    z-index: 99;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

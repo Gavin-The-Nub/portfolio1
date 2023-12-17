@@ -1,0 +1,34 @@
+#light .navbar {
+  transition-duration: 0.5s;
+  background: white;
+}
+#light .name {
+  color: rgb(0, 0, 0);
+}
+#dark .navbar {
+  background: #0c0c1d;
+  transition-duration: 1s;
+}
+
+.navbar {
+  height: 100px;
+  .wrapperNavbar {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  span {
+    font-weight: bold;
+  }
+  .social {
+    display: flex;
+    gap: 20px;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

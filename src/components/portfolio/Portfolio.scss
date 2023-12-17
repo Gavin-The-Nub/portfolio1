@@ -1,0 +1,103 @@
+.proj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  .cardProject {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    .card1 {
+      width: 500px;
+      height: 270px;
+      position: relative;
+
+      .cardImg1 {
+        background: url(YoutubeCopy.png);
+        background-size: 500px;
+        width: 500px;
+        height: 270px;
+      }
+
+      .goto1 {
+        width: 30px;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      .useTech {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        bottom: -50px;
+        background-color: rgb(46, 46, 46);
+        width: 100%;
+        height: 50px;
+        padding-left: 50px;
+      }
+      .useTech img {
+        width: 30px;
+      }
+    }
+    .card2 {
+      width: 500px;
+      height: 270px;
+      position: relative;
+
+      .cardImg2 {
+        background: url(frozenMeatTrading.png);
+        background-size: 500px;
+        width: 500px;
+        height: 270px;
+      }
+
+      .goto2 {
+        width: 30px;
+        display: none;
+      }
+      .useTech {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        bottom: -50px;
+        background-color: rgb(46, 46, 46);
+        width: 100%;
+        height: 50px;
+        padding-left: 50px;
+      }
+      .useTech img {
+        width: 30px;
+      }
+    }
+  }
+
+  .card1:hover .goto1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .card2:hover .goto2 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+.projText {
+  color: rgb(240, 240, 240);
+  margin-left: 20px;
+}
+
+.cardImg1:hover {
+  filter: blur(3px);
+}
+.linkCard1:hover .cardImg1 {
+  filter: blur(3px);
+}
+.cardImg2:hover {
+  filter: blur(3px);
+}
